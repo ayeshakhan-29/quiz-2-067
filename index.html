@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" ></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="/crud.js" ></script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="container">
+  <h1>Recipes API client</h1>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text"
+      class="form-control" name="title" id="title" aria-describedby="titlehelp" placeholder="Title of the Product">
+    <small id="titlehelp" class="form-text text-muted">Enter title of the Recipe</small>
+  </div>
+  <div class="form-group">
+    <label for="description">description</label>
+    <input type="text"
+      class="form-control" name="description" id="description" aria-describedby="helpId" placeholder="description">
+    <small id="helpdesc" class="form-text text-muted">Add description</small>
+  </div>
+  <button class="btn btn-info" id="addbtn" >ADD</button>
+  <div id="recipes" >
+    RECIPES WILL LOAD HERE
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Update Record</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-description">
+          <input type="hidden" id="updateID"/> <br/>
+          <div class="form-group">
+            <label for="updatetitle">Update Title</label>
+            <input type="text"
+              class="form-control" name="updatetitle" id="updatetitle" aria-describedby="updatetitlehelp" placeholder="">
+            <small id="helpId" class="form-text text-muted">Enter title to update</small>
+          </div>
+          <!--<input type="text" id="updatetitle"/> <br/> -->
+          <div class="form-group">
+            <label for="updatedescription">description</label>
+            <textarea class="form-control" name="updatedescription" id="updatedescription" rows="3"></textarea>
+          </div>
+          <!--<input type="text" id="updatedescription"/> <br/> -->
+          <div class="container-fluid">
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="updatesave">Update</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $('#exampleModal').on('show.bs.modal', event => {
+      var button = $(event.relatedTarget);
+      var modal = $(this);
+      // Use above variables to manipulate the DOM
+      
+    });
+  </script>
+</body>
+</html>

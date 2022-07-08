@@ -1,0 +1,26 @@
+.container{
+    background-color: rgb(218, 212, 205);
+}
+
+.col-md-3{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+   margin-bottom: 1rem;
+   
+}
+
+.adjust{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.description{
+    height: 100%;
+}
+
+.buttons{
+    margin: .9rem 0;
+}
